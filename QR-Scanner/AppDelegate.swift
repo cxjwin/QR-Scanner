@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  QR-Scanner
+//  CWQRCodeScanner
 //
-//  Created by cxjwin on 11/2/14.
+//  Created by cxjwin on 10/30/14.
 //  Copyright (c) 2014 cxjwin. All rights reserved.
 //
 
@@ -13,7 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        
+        if url.lastPathComponent == "QRCodeScanner" {
+            return true
+        }
+        
+        return false
+    }
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
