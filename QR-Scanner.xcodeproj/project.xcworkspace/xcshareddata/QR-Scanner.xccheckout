@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EC17F565-DE21-4549-A181-31731866D088</string>
+	<key>IDESourceControlProjectName</key>
+	<string>QR-Scanner</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EAC45AD6B08FD1520BE26E2BAF2908052D2C8A0A</key>
+		<string>https://github.com/cxjwin/QR-Scanner.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>QR-Scanner.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EAC45AD6B08FD1520BE26E2BAF2908052D2C8A0A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cxjwin/QR-Scanner.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EAC45AD6B08FD1520BE26E2BAF2908052D2C8A0A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EAC45AD6B08FD1520BE26E2BAF2908052D2C8A0A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>QR-Scanner</string>
+		</dict>
+	</array>
+</dict>
+</plist>

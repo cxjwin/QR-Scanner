@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555A51631A07118000D64C23 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A51621A07118000D64C23 /* CaptureView.swift */; };
 		5576D0E81A0686BE00FB49C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5576D0E71A0686BE00FB49C2 /* AppDelegate.swift */; };
 		5576D0EA1A0686BE00FB49C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5576D0E91A0686BE00FB49C2 /* ViewController.swift */; };
 		5576D0ED1A0686BE00FB49C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5576D0EB1A0686BE00FB49C2 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		550399071A068DE400B3E559 /* QR-Scanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "QR-Scanner.entitlements"; sourceTree = "<group>"; };
 		550399081A068DF000B3E559 /* Scanner Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Scanner Widget.entitlements"; sourceTree = "<group>"; };
+		555A51621A07118000D64C23 /* CaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 		5576D0E21A0686BE00FB49C2 /* QR-Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR-Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5576D0E61A0686BE00FB49C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5576D0E71A0686BE00FB49C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				550399071A068DE400B3E559 /* QR-Scanner.entitlements */,
 				5576D0E71A0686BE00FB49C2 /* AppDelegate.swift */,
 				5576D0E91A0686BE00FB49C2 /* ViewController.swift */,
+				555A51621A07118000D64C23 /* CaptureView.swift */,
 				5576D1071A0686FF00FB49C2 /* WebController.swift */,
 				5576D0EB1A0686BE00FB49C2 /* Main.storyboard */,
 				5576D0EE1A0686BE00FB49C2 /* Images.xcassets */,
@@ -332,6 +335,7 @@
 				5576D0EA1A0686BE00FB49C2 /* ViewController.swift in Sources */,
 				5576D0E81A0686BE00FB49C2 /* AppDelegate.swift in Sources */,
 				5576D1081A0686FF00FB49C2 /* WebController.swift in Sources */,
+				555A51631A07118000D64C23 /* CaptureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

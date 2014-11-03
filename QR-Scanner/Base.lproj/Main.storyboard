@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Lu-KD-s7X">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="80D-NI-rX1">
+            <objects>
+                <navigationController id="7Lu-KD-s7X" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vkb-rW-W8s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YCH-yg-6QI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ndh-xl-Rmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="-237"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QR_Scanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +32,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIf-ZV-d7L" customClass="CaptureView" customModule="QR_Scanner" customModuleProvider="target">
+                                <rect key="frame" x="160" y="140" width="280" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="bI8-fk-whd"/>
+                                    <constraint firstAttribute="width" constant="280" id="hWQ-vM-wRe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rIf-ZV-d7L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="bnU-Kd-IUR"/>
+                            <constraint firstAttribute="centerY" secondItem="rIf-ZV-d7L" secondAttribute="centerY" constant="20" id="kjl-8i-RdG"/>
+                            <constraint firstAttribute="centerX" secondItem="rIf-ZV-d7L" secondAttribute="centerX" id="lt7-Pm-Q3j"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bnU-Kd-IUR"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="k1f-Zw-1CF"/>
+                    <connections>
+                        <outlet property="captureView" destination="rIf-ZV-d7L" id="Ow0-kw-fG5"/>
+                        <segue destination="sJe-YD-OtF" kind="show" identifier="OpenURL" id="sgE-9b-43f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="300" y="577"/>
+        </scene>
+        <!--Web Controller-->
+        <scene sceneID="VIu-kv-EPv">
+            <objects>
+                <viewController id="sJe-YD-OtF" customClass="WebController" customModule="QR_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bwh-Os-vPL"/>
+                        <viewControllerLayoutGuide type="bottom" id="yjF-ZP-YJX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cib-yh-LtY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tyK-Sg-oZF">
+                                <rect key="frame" x="0.0" y="64" width="600" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="tyK-Sg-oZF" secondAttribute="trailing" constant="-16" id="IDO-d3-2E6"/>
+                            <constraint firstItem="tyK-Sg-oZF" firstAttribute="top" secondItem="Bwh-Os-vPL" secondAttribute="bottom" id="bbi-Oo-JrD"/>
+                            <constraint firstItem="tyK-Sg-oZF" firstAttribute="leading" secondItem="cib-yh-LtY" secondAttribute="leadingMargin" constant="-16" id="lP2-Wc-2eM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="tyK-Sg-oZF" id="Orh-Sp-ty4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nv6-Oh-Gj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061" y="577"/>
         </scene>
     </scenes>
 </document>
